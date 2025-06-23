@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import * as React from "react";
 import i18n from "@/lib/i18n";
@@ -14,9 +14,7 @@ export const LanguageContext = React.createContext<LanguageContextType | undefin
 
 export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
   React.useEffect(() => {
-    i18n.changeLanguage(
-      (localStorage.getItem("locale") as Language) || "vi"
-    );
+    i18n.changeLanguage((localStorage.getItem("locale") as Language) || "vi");
   }, []);
 
   const [language, setLanguage] = React.useState<Language>(() => {
@@ -37,4 +35,3 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
     </LanguageContext.Provider>
   );
 };
-

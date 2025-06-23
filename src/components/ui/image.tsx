@@ -6,17 +6,10 @@ interface CustomImageProps extends ImageProps {
   wrapperClassName?: string;
 }
 
-export function Image({
-  className,
-  wrapperClassName,
-  ...props
-}: CustomImageProps) {
+export function Image({ className, wrapperClassName, ...props }: CustomImageProps) {
   return (
     <div className={cn("relative", wrapperClassName)}>
-      <NextImage
-        className={cn("object-cover", className)}
-        {...props}
-      />
+      <NextImage className={cn("object-cover", className)} {...props} />
     </div>
   );
 }

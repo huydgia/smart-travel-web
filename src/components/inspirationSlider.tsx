@@ -1,28 +1,28 @@
 'use client';
 
-import 'keen-slider/keen-slider.min.css';
-import { useKeenSlider } from 'keen-slider/react';
-import Image from 'next/image';
-import { Heart, ChevronLeft, ChevronRight } from 'lucide-react';
-import { useState, useEffect } from 'react';
-import Container from './ui/container';
+import "keen-slider/keen-slider.min.css";
+import { useKeenSlider } from "keen-slider/react";
+import Image from "next/image";
+import { Heart, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
+import Container from "./ui/container";
 
 const inspirations = [
   {
-    image: '/images/stargazing.jpg',
-    caption: 'Địa điểm ngắm sao trên khắp thế giới, từ Utah đến Dubai',
+    image: "/images/stargazing.jpg",
+    caption: "Địa điểm ngắm sao trên khắp thế giới, từ Utah đến Dubai",
   },
   {
-    image: '/images/art-museum.jpg',
-    caption: 'Tiếp xúc với nghệ thuật ở Paris, NYC và các điểm đến hấp dẫn về văn hóa khác',
+    image: "/images/art-museum.jpg",
+    caption: "Tiếp xúc với nghệ thuật ở Paris, NYC và các điểm đến hấp dẫn về văn hóa khác",
   },
   {
-    image: '/images/food-tour.jpg',
-    caption: '13 thành phố, 13 chuyến đi khám phá ẩm thực tuyệt vời',
+    image: "/images/food-tour.jpg",
+    caption: "13 thành phố, 13 chuyến đi khám phá ẩm thực tuyệt vời",
   },
   {
-    image: '/images/beach-trip.jpg',
-    caption: 'Thư giãn tại các bãi biển đẹp nhất thế giới',
+    image: "/images/beach-trip.jpg",
+    caption: "Thư giãn tại các bãi biển đẹp nhất thế giới",
   },
 ];
 
@@ -43,11 +43,11 @@ export function InspirationSlider() {
     slidesPerView: 1.2,
     spacing: 12,
     breakpoints: {
-      '(min-width: 640px)': {
+      "(min-width: 640px)": {
         slidesPerView: 2.2,
         spacing: 16,
       },
-      '(min-width: 1024px)': {
+      "(min-width: 1024px)": {
         slidesPerView: 3.2,
         spacing: 20,
       },
@@ -63,66 +63,50 @@ export function InspirationSlider() {
   }, [sliderInstanceRef]);
 
   return (
-    <section className='bg-white dark:bg-zinc-900 px-4 md:px-10 py-10 space-y-4'>
+    <section className="bg-white dark:bg-zinc-900 px-4 md:px-10 py-10 space-y-4">
       <Container>
         <h2 className="text-2xl font-bold">Nguồn cảm hứng giúp bạn bắt đầu</h2>
-      <p className="text-gray-600 dark:text-gray-300">
-        Bạn chưa biết đi đâu? Hãy để chúng tôi truyền cảm hứng cho chuyến đi sắp tới của bạn.
-      </p>
-      <div className="relative">
-        {/* Slider Container */}
-        <div ref={sliderRef} className="keen-slider pb-2">
-          {inspirations.map((item, idx) => (
-            <div
-              key={idx}
-              className="keen-slider__slide rounded-xl bg-white dark:bg-zinc-900 shadow-md"
-            >
-              <div className="relative group">
-                <Image
-                  src={item.image}
-                  alt={item.caption}
-                  width={400}
-                  height={250}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <button className="absolute top-2 right-2 bg-white/80 dark:bg-zinc-800/80 p-1 rounded-full">
-                  <Heart className="w-4 h-4 text-black dark:text-white" />
-                </button>
+        <p className="text-gray-600 dark:text-gray-300 mb-4">
+          Bạn chưa biết đi đâu? Hãy để chúng tôi truyền cảm hứng cho chuyến đi sắp tới của bạn.
+        </p>
+        <div className="relative">
+          {/* Slider Container */}
+          <div ref={sliderRef} className="keen-slider pb-2">
+            {inspirations.map((item, idx) => (
+              <div
+                key={idx}
+                className="keen-slider__slide rounded-xl bg-white dark:bg-zinc-900 shadow-md"
+              >
+                <div className="relative group">
+                  <Image
+                    src={item.image}
+                    alt={item.caption}
+                    width={400}
+                    height={250}
+                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <button className="absolute top-2 right-2 bg-white/80 dark:bg-zinc-800/80 p-1 rounded-full">
+                    <Heart className="w-4 h-4 text-black dark:text-white" />
+                  </button>
+                </div>
+                <div className="px-3 py-2 text-sm font-semibold text-center">{item.caption}</div>
               </div>
-              <div className="px-3 py-2 text-sm font-semibold text-center">
-                {item.caption}
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        {/* Arrows */}
-        {/* <button
-          onClick={() => sliderInstanceRef?.prev()}
-          className="absolute top-1/2 left-0 -translate-y-1/2 p-2 bg-white dark:bg-zinc-700 rounded-full shadow z-10"
-        >
-          <ChevronLeft className="w-5 h-5" />
-        </button>
-        <button
-          onClick={() => sliderInstanceRef?.next()}
-          className="absolute top-1/2 right-0 -translate-y-1/2 p-2 bg-white dark:bg-zinc-700 rounded-full shadow z-10"
-        >
-          <ChevronRight className="w-5 h-5" />
-        </button> */}
-
-        {/* Dots */}
-        <div className="mt-4 flex justify-center gap-2">
-          {inspirations.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => sliderInstanceRef?.moveToSlide(idx)} 
-              className={`w-2.5 h-2.5 rounded-full ${
-                currentSlide === idx ? 'bg-black dark:bg-white' : 'bg-gray-300 dark:bg-gray-500'
-              }`}
-            />
-          ))}
+          {/* Dots */}
+          <div className="mt-4 flex justify-center gap-2">
+            {inspirations.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => sliderInstanceRef?.moveToSlide(idx)}
+                className={`w-2.5 h-2.5 rounded-full ${
+                  currentSlide === idx ? "bg-black dark:bg-white" : "bg-gray-300 dark:bg-gray-500"
+                }`}
+              />
+            ))}
+          </div>
         </div>
-      </div>
       </Container>
     </section>
   );
