@@ -3,7 +3,7 @@
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
-import { Heart, ChevronLeft, ChevronRight } from "lucide-react";
+import { Heart } from "lucide-react";
 import { useState, useEffect } from "react";
 import Container from "./ui/container";
 
@@ -32,12 +32,20 @@ export function InspirationSlider() {
   const [sliderRef, sliderInstanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     duration: 1000,
+    // slideChanged(slider) {
+    //   setCurrentSlide(slider.track?.details.rel);
+    // },
+    // created(slider) {
+    //   if (slider?.track?.details) {
+    //     setCurrentSlide(slider?.track.details.rel);
+    //   }
+    // },
     slideChanged(slider) {
-      setCurrentSlide(slider.track?.details.rel);
+      setCurrentSlide(slider.details().relativeSlide);
     },
     created(slider) {
-      if (slider?.track?.details) {
-        setCurrentSlide(slider?.track.details.rel);
+      if (slider.details()) {
+        setCurrentSlide(slider.details().relativeSlide);
       }
     },
     slidesPerView: 1.2,

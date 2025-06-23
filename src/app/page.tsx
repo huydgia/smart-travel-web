@@ -5,12 +5,12 @@ import { ComboPlanCard } from "@/components/comboPlanCard";
 import IconicPlacesSection from "@/components/iconicPlacesSection";
 import CollectionMosaic from "@/components/collectionSlider";
 
-const locations = [
-  { city: "Rome", country: "Ý", image: "/images/rome.jpg" },
-  { city: "Paris", country: "Pháp", image: "/images/paris.jpg" },
-  { city: "Las Vegas", country: "NV", image: "/images/lasvegas.jpg" },
-  { city: "Reykjavik", country: "Iceland", image: "/images/reykjavik.jpg" },
-];
+// const locations = [
+//   { city: "Rome", country: "Ý", image: "/images/rome.jpg" },
+//   { city: "Paris", country: "Pháp", image: "/images/paris.jpg" },
+//   { city: "Las Vegas", country: "NV", image: "/images/lasvegas.jpg" },
+//   { city: "Reykjavik", country: "Iceland", image: "/images/reykjavik.jpg" },
+// ];
 
 export default function HomePage() {
   return (

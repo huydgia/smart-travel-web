@@ -18,20 +18,20 @@ export default function LoginPage() {
           <div className="w-full text-center text-black dark:text-white">
             {/* <h2 className="text-3xl font-bold mb-2">Smart Travel Assistant</h2>
             <p className="text-lg">Tìm nơi ăn chơi, nghỉ dưỡng thông minh!</p> */}
-            <img src="././images/pic2.png" alt="Banner" className="w-full h-full object-cover" />
+            <Image src="././images/pic2.png" alt="Banner" className="w-full h-full object-cover" />
           </div>
         </div>
 
         {/* Right: Login form */}
         <div className="w-full md:w-1/2 p-8">
           {/* Logo light theme */}
-          <img
+          <Image
             src="././images/logo.png"
             alt="Smart Travel Assistant Logo"
             className="mx-auto mb-2 h-16 w-auto block dark:hidden"
           />
           {/* Logo dark theme */}
-          <img
+          <Image
             src="././images/dark-logo.png"
             alt="Smart Travel Assistant Logo"
             className="mx-auto mb-2 h-16 w-auto hidden dark:block"

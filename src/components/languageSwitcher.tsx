@@ -2,12 +2,11 @@
 
 import { useContext } from "react";
 import { LanguageContext } from "@/contexts/languageContext";
-import Image from "next/image";
 
-const flags = {
-  vi: "/icons/flags/vi.svg",
-  en: "/icons/flags/en.svg",
-};
+// const flags = {
+//   vi: "/icons/flags/vi.svg",
+//   en: "/icons/flags/en.svg",
+// };
 
 export default function LanguageSwitcher() {
   const langCtx = useContext(LanguageContext);
