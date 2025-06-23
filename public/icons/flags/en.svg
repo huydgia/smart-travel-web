@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7410 3900">
+  <rect width="7410" height="3900" fill="#b22234"/>
+  <g fill="#fff">
+    <path d="M0 300h7410v300H0zM0 900h7410v300H0zM0 1500h7410v300H0zM0 2100h7410v300H0zM0 2700h7410v300H0zM0 3300h7410v300H0z"/>
+  </g>
+  <rect width="2964" height="2100" fill="#3c3b6e"/>
+  <g fill="#fff">
+    <g id="s18">
+      <g id="s9">
+        <g id="s5">
+          <g id="s1">
+            <polygon points="247,90 287,210 175,140 319,140 207,210"/>
+          </g>
+          <use href="#s1" x="494"/>
+          <use href="#s1" x="988"/>
+          <use href="#s1" x="1482"/>
+          <use href="#s1" x="1976"/>
+        </g>
+        <use href="#s5" y="210"/>
+      </g>
+      <use href="#s9" y="420"/>
+    </g>
+    <use href="#s18" y="840"/>
+    <use href="#s9" y="1680"/>
+  </g>
+</svg>
