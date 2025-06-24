@@ -4,7 +4,7 @@ import Container from "./ui/container";
 export function HeroSection() {
   return (
     <Container>
-      <section className="relative h-[450px] w-full rounded-lg overflow-hidden">
+      <section id="hero-section" className="relative h-[450px] w-full rounded-lg overflow-hidden">
         {/* Ảnh nền */}
         <Image
           src="/images/hoi-an-photo.jpg"

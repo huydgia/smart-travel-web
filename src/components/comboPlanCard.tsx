@@ -70,9 +70,9 @@ export const ComboPlanCard = () => {
   return (
     <section className="bg-white dark:bg-zinc-900 px-4 md:px-10 py-10 space-y-4">
       <Container>
-        <h2 className="text-2xl font-bold">Hoạt động giải trí— ngay bây giờ</h2>
+        <h2 className="text-2xl font-bold">Khám phá các trải nghiệm ở gần Đà Nẵng</h2>
         <p className="text-gray-600 dark:text-gray-300 mb-4">
-          Những địa điểm yêu thích theo mùa mà bạn không muốn bỏ lỡ
+          Những lựa chọn không thể bỏ lỡ ở gần bạn
         </p>
 
         <div className="relative">
