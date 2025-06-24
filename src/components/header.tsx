@@ -3,7 +3,7 @@
 import Link from "next/link";
 import ThemeToggle from "./themeToggle";
 import Container from "./ui/container";
-import { Globe, Search } from "lucide-react";
+import { Search } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export function HeadeLayout() {
