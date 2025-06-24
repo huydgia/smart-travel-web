@@ -1,4 +1,8 @@
-module.exports = {
+import type { NextConfig } from 'next'
+
+const nextConfig: NextConfig = {
   reactStrictMode: true,
-  // các config khác nếu có
-};
+  // Các config khác...
+}
+
+export default nextConfig;

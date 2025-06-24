@@ -1,0 +1,11 @@
+services:
+  smart-travel-fe:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    container_name: smart-travel-fe
+    environment:
+      - NODE_ENV=production # hoặc development nếu dev
+    restart: unless-stopped
