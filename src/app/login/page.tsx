@@ -1,8 +1,8 @@
 'use client';
 
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import { Input } from "@/components/common/input";
+import { Button } from "@/components/common/button";
+import { Separator } from "@/components/common/separator";
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
@@ -18,7 +18,13 @@ export default function LoginPage() {
           <div className="w-full text-center text-black dark:text-white">
             {/* <h2 className="text-3xl font-bold mb-2">Smart Travel Assistant</h2>
             <p className="text-lg">Tìm nơi ăn chơi, nghỉ dưỡng thông minh!</p> */}
-            <Image src="././images/pic2.png" alt="Banner" className="w-full h-full object-cover" />
+            <Image 
+              src="/images/pic2.png" 
+              alt="Banner" 
+              className="w-full h-full object-cover" 
+              width={400}
+              height={250}
+            />
           </div>
         </div>
 
@@ -26,16 +32,20 @@ export default function LoginPage() {
         <div className="w-full md:w-1/2 p-8">
           {/* Logo light theme */}
           <Image
-            src="././images/logo.png"
+            src="/images/logo.png"
             alt="Smart Travel Assistant Logo"
-            className="mx-auto mb-2 h-16 w-auto block dark:hidden"
+            className="mx-auto mb-2 h-16 w-auto"
+            height={400}
+            width={250}
           />
           {/* Logo dark theme */}
-          <Image
-            src="././images/dark-logo.png"
+          {/* <Image
+            src="/images/logo.png"
             alt="Smart Travel Assistant Logo"
             className="mx-auto mb-2 h-16 w-auto hidden dark:block"
-          />
+            height={20}
+            width={20}
+          /> */}
           <h1 className="text-xl font-semibold text-gray-800 dark:text-white mb-6 text-center">
             Đăng nhập
           </h1>

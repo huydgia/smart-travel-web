@@ -5,7 +5,8 @@ import { Facebook, Instagram, Youtube } from "lucide-react";
 import { FaAppStoreIos, FaGooglePlay } from "react-icons/fa";
 import LanguageSwitcher from "./languageSwitcher";
 import { useTranslation } from "react-i18next";
-import Container from "./ui/container";
+import Container from "./common/container";
+import Logo from "./common/logo";
 
 const footerLinks = [
   {
@@ -55,21 +56,18 @@ export function FooterLayout() {
   return (
     <footer
       className="
-  bg-zinc-100 dark:bg-zinc-900
-  px-4 sm:px-6 md:px-10
-  py-4 sm:py-6 md:py-10
-  text-xs sm:text-sm
-  text-gray-600 dark:text-gray-300
-  sm:relative z-10
-"
+          bg-zinc-100 dark:bg-zinc-900
+          px-4 sm:px-6 md:px-10
+          py-4 sm:py-6 md:py-10
+          text-xs sm:text-sm
+          text-gray-600 dark:text-gray-300
+          sm:relative z-10"
     >
       <Container>
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
           {/* About / Intro */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-xl font-bold text-zinc-800 dark:text-white mb-4">
-              Smart VN Travel
-            </h3>
+            <Logo />
             <p className="text-gray-500 dark:text-gray-400 mb-4">
               Nền tảng hỗ trợ du khách khám phá Việt Nam một cách thuận tiện và đầy cảm hứng.
             </p>
