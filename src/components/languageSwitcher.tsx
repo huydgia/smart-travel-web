@@ -22,7 +22,12 @@ export default function LanguageSwitcher() {
   return (
     <div className="flex items-center gap-2" title="Chuyển ngôn ngữ">
       <label className="relative inline-flex items-center cursor-pointer">
-        <input type="checkbox" className="sr-only peer" checked={isEnglish} onChange={toggleLang} />
+        <input 
+          type="checkbox" 
+          className="sr-only peer" 
+          checked={isEnglish} 
+          onChange={toggleLang}
+        />
         <div
           className="w-10 h-5 bg-gray-300 dark:bg-zinc-600 rounded-full
           peer-checked:bg-blue-600 dark:peer-checked:bg-green-500 transition-colors duration-300"

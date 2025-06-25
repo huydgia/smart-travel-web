@@ -1,5 +1,6 @@
 import Image from "next/image";
-import Container from "./ui/container";
+import Container from "./common/container";
+import { Input } from "./common/input";
 
 export function HeroSection() {
   return (
@@ -25,10 +26,11 @@ export function HeroSection() {
 
           {/* Ô tìm kiếm */}
           <div className="w-full max-w-xl">
-            <input
+            <Input
               type="text"
               placeholder="Ví dụ: Đà Lạt, Hội An, Hà Nội..."
               className="w-full rounded-full px-6 py-3 text-black text-sm md:text-base border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+              showIcon={true}
             />
           </div>
         </div>

@@ -3,7 +3,7 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import Container from "./ui/container";
+import Container from "./common/container";
 
 const iconicPlaces = [
   {

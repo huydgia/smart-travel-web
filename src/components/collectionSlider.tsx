@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import Container from "./ui/container";
+import Container from "./common/container";
 
 const collections = [
   {
