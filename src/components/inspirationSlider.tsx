@@ -5,7 +5,7 @@ import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
 import { Heart } from "lucide-react";
 import { useState, useEffect } from "react";
-import Container from "./ui/container";
+import Container from "./common/container";
 
 const inspirations = [
   {

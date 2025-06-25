@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Heart } from "lucide-react";
 import { useKeenSlider } from "keen-slider/react";
-import Container from "./ui/container";
+import Container from "./common/container";
 
 type ComboPlanCardProps = {
   location: string;

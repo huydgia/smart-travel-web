@@ -9,8 +9,13 @@ import { LanguageProvider } from "@/contexts/languageContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Smart Travel Assistant",
+  title: "Smart Travel",
   description: "Hỗ trợ du khách khám phá Việt Nam dễ dàng hơn",
+  icons: {
+    icon: [
+      { url: '/favicon.ico'}
+    ], 
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
