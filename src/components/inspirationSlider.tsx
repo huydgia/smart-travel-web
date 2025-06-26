@@ -1,6 +1,5 @@
 'use client';
 
-import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
 import { Heart } from "lucide-react";
@@ -32,14 +31,6 @@ export function InspirationSlider() {
   const [sliderRef, sliderInstanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     duration: 1000,
-    // slideChanged(slider) {
-    //   setCurrentSlide(slider.track?.details.rel);
-    // },
-    // created(slider) {
-    //   if (slider?.track?.details) {
-    //     setCurrentSlide(slider?.track.details.rel);
-    //   }
-    // },
     slideChanged(slider) {
       setCurrentSlide(slider.details().relativeSlide);
     },
