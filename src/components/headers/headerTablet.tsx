@@ -13,11 +13,14 @@ export function HeaderTablet({
   onMenuToggle: () => void;
 }) {
   return (
-    <div className="flex justify-between items-center h-20 gap-4 px-10">
+    <div className="flex justify-between items-center h-20 gap-4 px-8">
       <div className="flex items-center gap-4">
         <button onClick={onMenuToggle}>
           <Menu size={22} />
         </button>
+      </div>
+
+      <div className="flex-shrink-0 mt-2">
         <Logo />
       </div>
 
@@ -28,7 +31,8 @@ export function HeaderTablet({
               type="text"
               placeholder="Tìm kiếm địa điểm..."
               className="w-full pl-10 pr-3 py-2 rounded-full bg-gray-100 dark:bg-neutral-800 text-sm text-gray-800 dark:text-white"
-              showIcon={true}         
+              showIcon={true}
+              inputSize="fullscreen"      
             />
           </div>
         </div>

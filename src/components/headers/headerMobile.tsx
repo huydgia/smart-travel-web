@@ -28,6 +28,7 @@ export function HeaderMobile({
         <div className="flex-1 mx-1">
           <Input 
             showIcon={true}
+            inputSize="fullscreen"
           />
         </div>
       )}
