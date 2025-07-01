@@ -8,9 +8,9 @@ export default function PopupSearch() {
     <div className="absolute left-0 top-full w-full bg-white dark:bg-neutral-900 rounded-b-2xl shadow-xl z-50 border border-t-0 border-gray-200 dark:border-neutral-700 overflow-hidden text-sm">
       
       {/* Gần đây */}
-      <div className="hover:bg-gray-100 dark:hover:bg-neutral-800 cursor-pointer px-4 py-3 flex items-start gap-3 transition">
-        <div className="flex items-center justify-center w-10 h-10 rounded-md bg-gray-100 dark:bg-neutral-800 shrink-0">
-          <LocateIcon size={20} className="text-gray-600 dark:text-gray-300" />
+      <div className="hover:bg-gray-100 dark:hover:bg-neutral-800 cursor-pointer px-4 py-3 flex items-center gap-3 transition">
+        <div className="flex items-center justify-center w-11 h-10 rounded-md bg-gray-100 dark:bg-neutral-800 shrink-0">
+          <LocateIcon size={22} className="text-gray-600 dark:text-gray-300" />
         </div>
         <div className="flex flex-col">
           <span className="text-gray-800 dark:text-gray-100 font-medium">Gần đây</span>
@@ -22,8 +22,8 @@ export default function PopupSearch() {
         <Image
           src="/images/hoian.jpg"
           alt="Thailand"
-          width={48}
-          height={48}
+          width={45}
+          height={45}
           className="rounded-md object-cover shrink-0"
         />
         <div className="flex flex-col">
@@ -46,12 +46,12 @@ export default function PopupSearch() {
         </div>
 
         {/* 1 item */}
-        <div className="hover:bg-gray-100 dark:hover:bg-neutral-800 cursor-pointer py-2 rounded-lg flex items-start gap-3 transition">
+        <div className="hover:bg-gray-100 dark:hover:bg-neutral-800 cursor-pointer py-2 rounded-lg flex items-center gap-3 transition">
           <Image
             src="/images/hoian.jpg"
             alt="Hà Nội"
-            width={40}
-            height={40}
+            width={45}
+            height={45}
             className="rounded-md object-cover shrink-0"
           />
           <div>
