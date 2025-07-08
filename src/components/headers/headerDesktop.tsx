@@ -54,47 +54,52 @@ export function HeaderDesktop({ isScrolled }: { isScrolled: boolean }) {
   }, [showSearchPopup]);
 
   return (
-    <div className="relative">
+    <div className="relative z-50">
       {showSearchPopup && (
-        <div className="fixed inset-0 bg-black/40 dark:bg-black/40 z-40"></div>
+        <div
+          className="fixed inset-0 bg-black/10 z-40"
+          onClick={() => setShowSearchPopup(false)}
+        ></div>
       )}
-      <div className="flex justify-between items-center h-20 relative z-50 px-4">
-        <Logo />
-        <div className="flex-1 flex justify-center">
-          {isScrolled ? (
-            <div
-              className="flex-1 flex justify-center relative"
-              ref={inputWrapperRef}
-            >
-              <div className="relative w-full max-w-[500px]">
-                <Input
-                  onClick={() => setShowSearchPopup(true)}
-                  type="text"
-                  placeholder="Tìm kiếm địa điểm..."
-                  showIcon={true}
-                  inputSize="popup"
-                  isActive={showSearchPopup}
-                />
-                {showSearchPopup && <PopupSearch />}
+      <div className={showSearchPopup ? "pointer-events-auto" : ""}>
+        <div className="flex justify-between items-center h-20 px-4">
+          <Logo />
+          <div className="flex-1 flex justify-center">
+            {isScrolled ? (
+              <div
+                className="flex-1 flex justify-center relative"
+                ref={inputWrapperRef}
+              >
+                <div className="relative w-full max-w-[500px] z-50">
+                  <Input
+                    onClick={() => setShowSearchPopup(true)}
+                    type="text"
+                    placeholder="Tìm kiếm địa điểm..."
+                    showIcon={true}
+                    inputSize="popup"
+                    isActive={showSearchPopup}
+                  />
+                  {showSearchPopup && <PopupSearch />}
+                </div>
               </div>
-            </div>
-          ) : (
-            <div className="flex gap-6 text-sm font-medium text-gray-800 dark:text-gray-200">
-              <Link href="#">Khám phá</Link>
-              <Link href="#">Chuyến đi</Link>
-              <Link href="#">Đánh giá</Link>
-            </div>
-          )}
-        </div>
+            ) : (
+              <div className="flex gap-6 text-sm font-medium text-gray-800 dark:text-gray-200">
+                <Link href="#">Khám phá</Link>
+                <Link href="#">Chuyến đi</Link>
+                <Link href="#">Đánh giá</Link>
+              </div>
+            )}
+          </div>
 
-        <div className="flex items-center gap-4">
-          <ThemeToggle />
-          <Link
-            href="/login"
-            className="bg-black dark:bg-white text-white dark:text-black text-sm font-semibold rounded-full px-4 py-2 hover:opacity-90"
-          >
-            Đăng nhập
-          </Link>
+          <div className="flex items-center gap-4">
+            <ThemeToggle />
+            <Link
+              href="/login"
+              className="bg-black dark:bg-white text-white dark:text-black text-sm font-semibold rounded-full px-4 py-2 hover:opacity-90"
+            >
+              Đăng nhập
+            </Link>
+          </div>
         </div>
       </div>
     </div>

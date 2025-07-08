@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 import { Input } from "../common/input";
 import Logo from "../common/logo";
+import { useState } from "react";
+import SearchFullScreen from "../searchFullScreen";
 
 export function HeaderTablet({
   isScrolled,
@@ -12,38 +14,48 @@ export function HeaderTablet({
   isScrolled: boolean;
   onMenuToggle: () => void;
 }) {
+  const [showSearchFullScreen, setShowSearchFullScreen] = useState(false);
+
   return (
-    <div className="flex justify-between items-center h-20 gap-4 px-8">
-      <div className="flex items-center gap-4">
-        <button onClick={onMenuToggle}>
-          <Menu size={22} />
-        </button>
-      </div>
-
-      <div className="flex-shrink-0 mt-2">
-        <Logo />
-      </div>
-
-      {isScrolled && (
-        <div className="flex-1">
-          <div className="relative max-w-[400px] mx-auto">
-            <Input
-              type="text"
-              placeholder="Tìm kiếm địa điểm..."
-              className="w-full pl-10 pr-3 py-2 rounded-full bg-gray-100 dark:bg-neutral-800 text-sm text-gray-800 dark:text-white"
-              showIcon={true}
-              inputSize="fullscreen"      
-            />
-          </div>
-        </div>
+    <>
+      {/* Overlay toàn màn hình khi mở search */}
+      {showSearchFullScreen && (
+        <SearchFullScreen onClose={() => setShowSearchFullScreen(false)} />
       )}
+    
+      <div className="flex justify-between items-center h-20 gap-4 px-8">
+        <div className="flex items-center gap-4">
+          <button onClick={onMenuToggle}>
+            <Menu size={22} />
+          </button>
+        </div>
 
-      <Link
-        href="/login"
-        className="bg-black dark:bg-white text-white dark:text-black text-sm font-semibold rounded-full px-4 py-2 hover:opacity-90"
-      >
-        Đăng nhập
-      </Link>
-    </div>
+        <div className="flex-shrink-0 mt-2">
+          <Logo />
+        </div>
+
+        {isScrolled && (
+          <div className="flex-1">
+            <div className="relative max-w-[400px] mx-auto">
+              <Input
+                type="text"
+                placeholder="Tìm kiếm địa điểm..."
+                className="w-full pl-10 pr-3 py-2 rounded-full bg-gray-100 dark:bg-neutral-800 text-sm text-gray-800 dark:text-white"
+                showIcon={true}
+                inputSize="fullscreen"    
+                onClick={() => setShowSearchFullScreen(true)}  
+              />
+            </div>
+          </div>
+        )}
+
+        <Link
+          href="/login"
+          className="bg-black dark:bg-white text-white dark:text-black text-sm font-semibold rounded-full px-4 py-2 hover:opacity-90"
+        >
+          Đăng nhập
+        </Link>
+      </div>
+    </>
   );
 }
