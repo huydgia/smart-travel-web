@@ -76,7 +76,7 @@ export const ComboPlanCard = () => {
         </p>
 
         <div className="relative">
-          <div ref={sliderRef} className="keen-slider">
+          <div ref={sliderRef} className="keen-slider pb-2">
             {activities.map((item, index) => (
               <div
                 key={index}
